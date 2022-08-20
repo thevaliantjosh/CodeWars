@@ -136,4 +136,36 @@ console.log(letsEscape);
 * */
 
 
+/*
+CODE OUTPUT
+\' single quote
+\" double quote
+\\ backslash
+\n newline
+\r carriage return
+\t tab
+\b backspace
+\f form feed
+* */
 
+let multiLineString = "First Line\n\t\\SecondLine\nThirdLine"
+console.log(multiLineString);
+
+//you can concatenate string using += operator
+
+let plusEqualsString = "Using plus Equals";
+plusEqualsString += " On Strings";
+
+console.log(plusEqualsString);
+
+//concatenation on strings
+
+let codingAtMidnight = "I\n" + myName + ", am coding after midnight!"
+console.log(codingAtMidnight);
+
+//Appending variables to strings
+
+let game = "Morrowind"
+let describeGame= " is really fun!"
+game += describeGame;
+console.log(game);
