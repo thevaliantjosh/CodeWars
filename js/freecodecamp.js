@@ -184,3 +184,29 @@ console.log(firstLetterInLastName);
 let myInitials = firstLetterInName + firstLetterInLastName;
 console.log(myInitials);
 
+//String Immutability
+
+let worldGreeting = "Jello World";
+console.log(worldGreeting);
+//we cannot change strings once made, we need to declare again what we want the variable of worldGreeting to be to change it.
+
+console.log(worldGreeting.replace(worldGreeting[0], "H"));
+//we can replace the "H" here but the variable worldGreeting still has the original mistake
+console.log(worldGreeting);
+//to fix it we need to redeclare the variable!
+worldGreeting = "Hello World!";
+console.log(worldGreeting);
+//no more Jello! :)
+
+//Bracket Notation to find the Nth Character in String as Well as the Last!
+let findingNumbersInStrings = "L3t5 F1nd @ll Th3 Numb3r5!"
+let findThree = findingNumbersInStrings[1];
+let findFive = findingNumbersInStrings[3];
+let findOne = findingNumbersInStrings[6];
+let findAtSymbol = findingNumbersInStrings[10];
+let findThreeAgain = findingNumbersInStrings[16];
+let findThirdThree = findingNumbersInStrings[22];
+let findFiveAgain = findingNumbersInStrings[findingNumbersInStrings.length -2];
+let findExclamation = findingNumbersInStrings[findingNumbersInStrings.length-1];
+let gimmeThoseNumbers = findThree + findFive + findOne + findAtSymbol + findThreeAgain + findThirdThree + findFiveAgain + findExclamation;
+console.log(gimmeThoseNumbers);
