@@ -169,3 +169,18 @@ let game = "Morrowind"
 let describeGame= " is really fun!"
 game += describeGame;
 console.log(game);
+
+
+//Length of a String
+let charInGame = game.length
+console.log(game.length);
+
+//Bracket Notation to Find First Character in String
+
+let firstLetterInName= myName[0]
+console.log(firstLetterInName);
+let firstLetterInLastName = myName.charAt(7);
+console.log(firstLetterInLastName);
+let myInitials = firstLetterInName + firstLetterInLastName;
+console.log(myInitials);
+
