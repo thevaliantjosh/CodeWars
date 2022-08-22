@@ -210,3 +210,16 @@ let findFiveAgain = findingNumbersInStrings[findingNumbersInStrings.length -2];
 let findExclamation = findingNumbersInStrings[findingNumbersInStrings.length-1];
 let gimmeThoseNumbers = findThree + findFive + findOne + findAtSymbol + findThreeAgain + findThirdThree + findFiveAgain + findExclamation;
 console.log(gimmeThoseNumbers);
+
+//Word Blanks
+
+function worldBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    let result = "";
+    result += `The ${myAdjective} ${myNoun} was ${myVerb} in the woods ${myAdverb}.`;
+
+    return result;
+}
+
+console.log(worldBlanks("Harry Potter", "Amazing", "Flying", "Swiftly"));
+console.log(worldBlanks("Bigfoot", "Notorious", "Walking", "Sneakily"));
+
