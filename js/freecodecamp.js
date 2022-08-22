@@ -223,3 +223,44 @@ function worldBlanks(myNoun, myAdjective, myVerb, myAdverb) {
 console.log(worldBlanks("Harry Potter", "Amazing", "Flying", "Swiftly"));
 console.log(worldBlanks("Bigfoot", "Notorious", "Walking", "Sneakily"));
 
+//Store Multiple Values with Arrays
+
+let thingsILike = ["Harry Potter", "Bigfoot", "Halo", "Role Playing Games"];
+console.log(thingsILike);
+thingsILike.push("Guitar");
+console.log(thingsILike);
+thingsILike.unshift("The Paranormal");
+console.log(thingsILike);
+thingsILike.shift();
+console.log(thingsILike);
+thingsILike.unshift("The Witcher");
+thingsILike[1] = 42;
+thingsILike.push(42);
+console.log(thingsILike);
+thingsILike.pop();
+thingsILike[thingsILike.length -1] = "Harry Potter";
+console.log(thingsILike);
+
+//Shopping List
+
+let myShoppingList = [["Milk", 1], ["Eggs", 12], ["Butter", 1], ["Bacon", 1], ["Bread", 1], ["Cheese", 2]];
+console.log(myShoppingList);
+console.log(myShoppingList[0][0]);
+myShoppingList.unshift(["Cereal", 3]);
+console.log(myShoppingList);
+console.table(myShoppingList);
+
+//Reusable with Functions
+
+function reusableFunction() {
+    console.log("Coding is the best!");
+}
+reusableFunction();
+
+//Passing value to functions with arguments
+//Inside the Parens our the parameters that can be use
+function ourFunctionWithArgs(a, b) {
+    console.log(a - b);
+}
+//
+ourFunctionWithArgs(10, 5);
