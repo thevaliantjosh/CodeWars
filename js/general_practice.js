@@ -49,3 +49,24 @@ function feedTurtle(animal) {
 }
 console.log(feedTurtle(turtle));
 
+//Template Literals
+
+const horse = {
+    name: "Sir Codes-A-Lot",
+    size: "Large",
+    skills: ["All", "Of", "The", "Skills"],
+    age: 4
+}
+
+const { name, size, skills } = horse;
+
+let bio = `${name} is a ${size} horse skilled in ${skills.join(' ')}!`;
+console.log(bio);
+
+// function horseAge(str, age) {
+//     const ageStr = age > 5 ? "old" : "young";
+//     return `${str[0]}${ageStr} at ${age} years`;
+// }
+//
+// const bio2 = horseAge`This horse is ${horse.age}`;
+// console.log(horseAge(bio2));

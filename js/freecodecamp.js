@@ -1,3 +1,4 @@
+"use strict"
 //alert("Welcome to freecodecamp practice!");
 
 /*Data Types:
@@ -264,3 +265,52 @@ function ourFunctionWithArgs(a, b) {
 }
 //
 ourFunctionWithArgs(10, 5);
+
+//Scope
+//Global scope can be seen everywhere in your javascript code;
+//let declare a variable with global scope
+let myGlobalScope = "Global Scope! BOOYA!";
+
+//now set a variable with local scope
+
+function funkyLocal() {
+    let oopsGlobal = "\"I heard their not using Strict at this party! OOOOWEEEE! I'm a funky Local! Look at me!\"";
+
+}
+
+//now have a function call on global and local scopes and see the output
+
+function callingAllLocalsAndGlobals() {
+    let output = "";
+    if (typeof myGlobalScope != "undefined") {
+        output += "We have a: " + myGlobalScope;
+    }
+    if (typeof oopsGlobal != "undefined") {
+        output += "...and a Local Crasher!...." + oopsGlobal;
+    }
+    console.log(output);
+}
+//funkyLocal();
+
+callingAllLocalsAndGlobals();
+
+function myLocalScope() {
+    let thisIsMyNumber = 42;
+    console.log(thisIsMyNumber);
+}
+myLocalScope();
+//Can't access local scoped variables outside the function it's delcared in
+//console.log(thisIsMyNumber);
+
+//Global Vs Local Scope in Functions
+
+let outerWear = "T-shirt"
+
+function myOutfit() {
+    let outerWear = "sweater";
+    return outerWear
+}
+
+console.log(outerWear);
+console.log(myOutfit());
+
