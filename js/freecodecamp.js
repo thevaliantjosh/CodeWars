@@ -311,6 +311,24 @@ function myOutfit() {
     return outerWear
 }
 
-console.log(outerWear);
+//console.log(outerWear);
 console.log(myOutfit());
+console.log(outerWear);
 
+function timesFive(num) {
+    return num * 5;
+}
+console.log(timesFive(5));
+
+//Understanding Undefined Values returned from a function
+
+let zero = 0
+
+function addThree() {
+    zero = zero + 3;
+}
+console.log(addThree());
+function addFive() {
+    zero += 5;
+}
+console.log(addFive())
