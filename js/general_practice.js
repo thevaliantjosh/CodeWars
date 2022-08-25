@@ -70,3 +70,22 @@ console.log(bio);
 //
 // const bio2 = horseAge`This horse is ${horse.age}`;
 // console.log(horseAge(bio2));
+
+//Return the Remainder from Two Numbers
+function remainder(x, y) {
+    return x % y;
+}
+
+//Write a function that will know whether the input is an array or not
+
+let myArray = ["I", "E", "A", "I", "A", "I", "O"]
+
+function isArray(array) {
+    if(typeof array === "object") {
+        return "That is an array Buddy!"
+    } else {
+        return "That's not an array Guy!"
+    }
+}
+console.log(isArray(myArray))
+console.log(isArray(28));

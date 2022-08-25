@@ -332,3 +332,15 @@ function addFive() {
     zero += 5;
 }
 console.log(addFive())
+
+// 2. Define a function named increment that takes in an input and adds 1 to it if the input is numeric. If the input is not numeric, then return false.
+//
+// increment(0)                // 1
+// increment("10")             // 11
+// increment(-5)               // -4
+// increment("Bob")            // false
+// increment([1, 2, 3])        // false
+// increment(true)             // false
+// increment(null)             // false
+
+
