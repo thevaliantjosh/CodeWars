@@ -159,11 +159,40 @@ console.log("Now: " + JSON.stringify(testArr));
 console.log(testArr);
 
 //Working with Booleans;
+/*&& will return false if one value is false, unless both values are true
+* || (or) will return true if one value is true, unless both is false
+* ! (not) applied to a single Boolean value and inverts this value. !true is false and !false is true*/
 
-function welcomeToBooleans() {
-    return false;
+let x1 = true && false;
+console.log(`x1 is: ${x1}\nThis is because one value is false`);
+let x2 = !x1;
+console.log(`x2 is: ${x2}\nThis is because the opposite of false is True!`);
+let x3 = x1 || x2
+console.log(`x3 is: ${x3}\nThis is because the Or Operator will return True if\none value is true, that being x2!`);
+
+//Boolean Exercise
+/*Write a function named nand that takes in two Boolean values. If both values are
+* true, the result should be false. In the other case the return should be true*/
+
+function nand(input1, input2) {
+    if(typeof input1 !== "boolean" || typeof input2 !== "boolean") {
+        return console.log("Please enter either, True or False, for the inputs!");
+    } else {
+        return !(input1 && input2|| !input1 < input2);
+    }
 }
-console.log(welcomeToBooleans());
+
+console.log(nand(true, true));//expecting false
+console.log(nand(true, false));//expecting true
+console.log(nand(false, true));//expecting true
+console.log(nand(false, false));//expecting true
+
+
+
+// function welcomeToBooleans() {
+//     return false;
+// }
+// console.log(welcomeToBooleans());
 
 function temperatureConversion(temperature, isFahrenheit) {
     if(isFahrenheit === true) {
