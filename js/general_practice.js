@@ -17,12 +17,12 @@ const go = {
     age: 33,
     skill: "Cooking"
 }
-//Computed Property Names, add the variables of the object to an object in the console.log
-// Dont do this: console.log(ready); you wont know the name of the object!
+// //Computed Property Names, add the variables of the object to an object in the console.log
+// // Dont do this: console.log(ready); you wont know the name of the object!
 //Do this:
-console.log({ready, set, go});
+// console.log({ready, set, go});
 //Or make it a table!
-console.table([ready, set, go]);
+// console.table([ready, set, go]);
 
 //Destructuring
 
@@ -39,7 +39,7 @@ const turtle = {
 // function feedTurtle({name, meal, diet}) {
 //     return `Feed Turtle ${name} ${meal} slices of ${diet}`;
 // }
-// console.log(feedTurtle(turtle))
+// // console.log(feedTurtle(turtle))
 
 //Or
 
@@ -47,7 +47,7 @@ function feedTurtle(animal) {
     const { name, meal, diet} = animal
     return `Feed ${name} ${meal} slices of ${diet}`;
 }
-console.log(feedTurtle(turtle));
+// console.log(feedTurtle(turtle));
 
 //Template Literals
 
@@ -61,7 +61,7 @@ const horse = {
 const { name, size, skills } = horse;
 
 let bio = `${name} is a ${size} horse skilled in ${skills.join(' ')}!`;
-console.log(bio);
+// console.log(bio);
 
 // function horseAge(str, age) {
 //     const ageStr = age > 5 ? "old" : "young";
@@ -69,7 +69,7 @@ console.log(bio);
 // }
 //
 // const bio2 = horseAge`This horse is ${horse.age}`;
-// console.log(horseAge(bio2));
+// // console.log(horseAge(bio2));
 
 //Return the Remainder from Two Numbers
 function remainder(x, y) {
@@ -87,8 +87,8 @@ function isArray(array) {
         return "That's not an array Guy!"
     }
 }
-console.log(isArray(myArray))
-console.log(isArray(28));
+// console.log(isArray(myArray))
+// console.log(isArray(28));
 
 
 //Practice With functions
@@ -109,7 +109,7 @@ let arrayOfRadii = [2, 4, 6, 8, 10, 12]
 //     }
 //
 // }
-// console.log(calculateCircumference(arrayOfRadii));
+// // console.log(calculateCircumference(arrayOfRadii));
 
 function calculateCircumference(radius) {
     const pi = 3.14159;
@@ -117,7 +117,7 @@ function calculateCircumference(radius) {
     return circumference.toFixed(2);
 }
 
-console.log(calculateCircumference(13));
+// console.log(calculateCircumference(13));
 
 function milesToKilometers(miles) {
     return miles * 1.609;
@@ -132,7 +132,7 @@ function change(num) {
 }
 
 changed = change(10);
-console.log(changed);
+// console.log(changed);
 
 //Function will take in an array, and an item as its parameters
 /*arr.push(item) is a statement that when passed an argument of "item"
@@ -146,17 +146,17 @@ function nextInLine(arr, item) {
 
 let testArr = [1, 2, 3, 4, 5];
 
-//The below console.log will take the array and return it as a string.
-console.log("Before: " + JSON.stringify(testArr));
-/*The next console.log will call the function nextInLine, and pass in the arguments of the testArr, and the "item", thus invoking the function to push 6 to the end, and then return what index of the array that has been shifted out.  */
-console.log(nextInLine(testArr, 6));
+// //The below console.log will take the array and return it as a string.
+// console.log("Before: " + JSON.stringify(testArr));
+// /*The next console.log will call the function nextInLine, and pass in the arguments of the testArr, and the "item", thus invoking the function to push 6 to the end, and then return what index of the array that has been shifted out.  */
+// console.log(nextInLine(testArr, 6));
 /*Now we will see what the array look like after invoking the function again, returning a string to see it more clearly*/
-console.log("After: " + JSON.stringify(testArr));
-console.log(nextInLine(testArr, "buddy"));
-console.log(nextInLine(testArr, [7, 8, 9]));
-console.log(nextInLine(testArr, "guy"));
-console.log("Now: " + JSON.stringify(testArr));
-console.log(testArr);
+// console.log("After: " + JSON.stringify(testArr));
+// console.log(nextInLine(testArr, "buddy"));
+// console.log(nextInLine(testArr, [7, 8, 9]));
+// console.log(nextInLine(testArr, "guy"));
+// console.log("Now: " + JSON.stringify(testArr));
+// console.log(testArr);
 
 //Working with Booleans;
 /*&& will return false if one value is false, unless both values are true
@@ -164,11 +164,11 @@ console.log(testArr);
 * ! (not) applied to a single Boolean value and inverts this value. !true is false and !false is true*/
 
 let x1 = true && false;
-console.log(`x1 is: ${x1}\nThis is because one value is false`);
+// console.log(`x1 is: ${x1}\nThis is because one value is false`);
 let x2 = !x1;
-console.log(`x2 is: ${x2}\nThis is because the opposite of false is True!`);
+// console.log(`x2 is: ${x2}\nThis is because the opposite of false is True!`);
 let x3 = x1 || x2
-console.log(`x3 is: ${x3}\nThis is because the Or Operator will return True if\none value is true, that being x2!`);
+// console.log(`x3 is: ${x3}\nThis is because the Or Operator will return True if\none value is true, that being x2!`);
 
 //Boolean Exercise
 /*Write a function named nand that takes in two Boolean values. If both values are
@@ -182,17 +182,32 @@ function nand(input1, input2) {
     }
 }
 
-console.log(nand(true, true));//expecting false
-console.log(nand(true, false));//expecting true
-console.log(nand(false, true));//expecting true
-console.log(nand(false, false));//expecting true
+// console.log(nand(true, true));//expecting false
+// console.log(nand(true, false));//expecting true
+// console.log(nand(false, true));//expecting true
+// console.log(nand(false, false));//expecting true
+
+function nor(input1, input2) {
+    if(typeof input1 !== "boolean" || typeof input2 !== "boolean") {
+        return console.log("Please enter either, True of False, for the inputs!")
+    } else {
+        return !((!input1 < input2) || (input1 || input2));
+    }
+}
+
+/*Operators have an order of operation: NOT, then AND, last OR NAO. Use Parens to change the order. */
+
+// console.log(nor(false, false));//expected true
+// console.log(nor(true, false));//expected false
+// console.log(nor(false, true));//expected false
+// console.log(nor(true, true));//expected false
 
 
 
 // function welcomeToBooleans() {
 //     return false;
 // }
-// console.log(welcomeToBooleans());
+// // console.log(welcomeToBooleans());
 
 function temperatureConversion(temperature, isFahrenheit) {
     if(isFahrenheit === true) {
@@ -202,5 +217,5 @@ function temperatureConversion(temperature, isFahrenheit) {
     }
 }
 
-console.log(temperatureConversion(32, true));
-console.log(temperatureConversion(32, false));
+// console.log(temperatureConversion(32, true));
+// console.log(temperatureConversion(32, false));
