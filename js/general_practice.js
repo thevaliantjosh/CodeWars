@@ -158,3 +158,20 @@ console.log(nextInLine(testArr, "guy"));
 console.log("Now: " + JSON.stringify(testArr));
 console.log(testArr);
 
+//Working with Booleans;
+
+function welcomeToBooleans() {
+    return false;
+}
+console.log(welcomeToBooleans());
+
+function temperatureConversion(temperature, isFahrenheit) {
+    if(isFahrenheit === true) {
+        return `${(temperature - 32) * 5 / 9}\xB0C`;
+    }   else {
+        return `${(temperature * 9 / 5) + 32}\xB0F`;
+    }
+}
+
+console.log(temperatureConversion(32, true));
+console.log(temperatureConversion(32, false));
