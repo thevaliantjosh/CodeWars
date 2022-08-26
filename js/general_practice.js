@@ -134,6 +134,11 @@ function change(num) {
 changed = change(10);
 console.log(changed);
 
+//Function will take in an array, and an item as its parameters
+/*arr.push(item) is a statement that when passed an argument of "item"
+will push that item to the end of the array.
+return arr.shift(); will take the array, and remove the first index of that array*/
+
 function nextInLine(arr, item) {
     arr.push(item);
     return arr.shift();
@@ -141,6 +146,15 @@ function nextInLine(arr, item) {
 
 let testArr = [1, 2, 3, 4, 5];
 
+//The below console.log will take the array and return it as a string.
 console.log("Before: " + JSON.stringify(testArr));
+/*The next console.log will call the function nextInLine, and pass in the arguments of the testArr, and the "item", thus invoking the function to push 6 to the end, and then return what index of the array that has been shifted out.  */
 console.log(nextInLine(testArr, 6));
+/*Now we will see what the array look like after invoking the function again, returning a string to see it more clearly*/
 console.log("After: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, "buddy"));
+console.log(nextInLine(testArr, [7, 8, 9]));
+console.log(nextInLine(testArr, "guy"));
+console.log("Now: " + JSON.stringify(testArr));
+console.log(testArr);
+
